@@ -1,0 +1,10 @@
+dist
+node_modules
+public
+
+# 自动生成的类型声明文件
+types/auto-imports.d.ts
+types/components.d.ts
+types/route-map.d.ts
+
+pnpm-lock.yaml

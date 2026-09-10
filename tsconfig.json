@@ -1,0 +1,14 @@
+{
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	],
+	// 让 Volar / vue-tsc 识别 <route lang="json"> 自定义块，并为文件路由生成类型
+	"vueCompilerOptions": {
+		"plugins": [
+			"vue-router/volar/sfc-typed-router",
+			"vue-router/volar/sfc-route-blocks"
+		]
+	}
+}

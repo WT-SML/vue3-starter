@@ -1,0 +1,19 @@
+home: home
+routerTips:
+  auth: Sorry, you need to login first.
+  role: Sorry, you do not have sufficient permissions to access this page.
+serverTips:
+  '400': Request errors
+  '401': Not authorised, please login again.
+  '403': Access is denied.
+  '404': Request error
+  '405': Request method errors.
+  '408': Request is time out.
+  '409': Request a conflict.
+  '500': Server errors.
+  '501': Service is not achieved.
+  '502': Network errors.
+  '503': Service is not available.
+  '504': Network is time out.
+  '505': HTTP version is not supported.
+  others: Connection errors {code}

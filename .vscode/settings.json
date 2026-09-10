@@ -1,0 +1,17 @@
+{
+	"i18n-ally.localesPaths": ["locales"],
+	"i18n-ally.keystyle": "nested",
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+	"explorer.fileNesting.patterns": {
+		".env": ".env.*",
+		"package.json": ".editorconfig,eslint.config.*,.prettier*,pnpm*,.gitignore,readme*,index.html,agents.*",
+		"vite.config.*": "vite*,uno*"
+	},
+	"eslint.validate": ["javascript", "typescript", "vue"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.requireConfig": true
+}

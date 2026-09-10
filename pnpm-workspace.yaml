@@ -1,0 +1,16 @@
+# 依赖安装脚本（preinstall / install / postinstall）审批表。
+# true = 允许执行，false = 明确禁止；未列出的包一律按「未审批」处理并禁止执行。
+# 因此下面必须覆盖当前依赖树中所有带安装脚本的包，否则 install 会以 ERR_PNPM_IGNORED_BUILDS 失败。
+allowBuilds:
+  # install.js 会下载/校验平台二进制，但其二进制实际来自可选依赖 @esbuild/win32-x64 等包，无需该脚本。
+  esbuild: false
+  # build-from-source.js 会从源码编译原生模块；它是 sass-embedded-all-unknown 的传递可选依赖，被禁后不影响功能。
+  '@parcel/watcher': false
+  # postinstall 自身已用 try/catch 吞掉异常，被禁后无副作用。
+  vue-demi: false
+
+# 跳过「最小发布时长」校验的包。minimumReleaseAge 未显式配置时取 pnpm 默认值 1440 分钟（1 天），
+# 而 unocss 发版非常频繁（unocss 与 @unocss/* 同时发版），等待一天会让 pnpm update 静默回退到旧版本。
+minimumReleaseAgeExclude:
+  - unocss
+  - '@unocss/*'
