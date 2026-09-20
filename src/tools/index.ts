@@ -1,8 +1,5 @@
 import JSEncrypt from 'jsencrypt'
-import {
-	LOCAL_PRIVATE_KEY,
-	LOCAL_PUBLIC_KEY_CER,
-} from '~/constants/safe'
+import { LOCAL_PRIVATE_KEY, LOCAL_PUBLIC_KEY_CER } from '~/constants/safe'
 import emitter from '~/tools/emitter'
 import { COMMON_PROVIDE, type CommonProvidePayload } from '~/constants/evt-name'
 
@@ -24,7 +21,6 @@ export const localDecrypt = (ciphertext: string): string => {
 	decryptor.setPrivateKey(LOCAL_PRIVATE_KEY) // 设置秘钥
 	return decryptor.decrypt(ciphertext) || '' // 解密公钥加密的内容
 }
-
 
 // 根据值获取描述
 export const getLabelByVal = <T extends Record<string, unknown>>(

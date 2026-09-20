@@ -1,8 +1,5 @@
 import request from '~/http'
-import type {
-	LoginParams,
-	LoginResult,
-} from '~/apis/types'
+import type { LoginParams, LoginResult } from '~/apis/types'
 
 // 登录
 export const login = (params: LoginParams) =>
